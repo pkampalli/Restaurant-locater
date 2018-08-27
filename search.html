@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Student Name: Pramodh Kampalli  -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+    <script
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVR3nA9Yc1Uxa_pyCK1CR62Hkk0F1AV3M&callback=initialize"
+      async defer></script>
+      <style>
+      input[type=text]{
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=button]{
+        width: 10%;
+        padding: 8px 8px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      </style>
+  </head>
+  <body onload="initialize();" >
+    <div id="input" style="background-color:#55ACEE">
+    <form>
+    </br><center>
+       <label><input type="text" id="search"  placeholder="Search terms..."/></label>
+      <input type="button" onclick="show();" value="Find"/></br>
+      <font color="white" size="2">  Drag the map to required location and hit 'Find' button </font >
+     </center>
+    </form>
+  </div>
+    <div id="output" style="margin-left:90px" >&nbsp;</div>
+    <div id="test">&nbsp;</div>
+  </body>
+</html>
